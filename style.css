@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Base */
+
+body {
+    margin: 0;
+    background-color: #111315;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 8%;
+    background-color: #111315;
+}
+
+.nav-logo {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero */
+
+.hero {
+    padding: 20px 8% 100px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(4rem, 14vw, 10rem);
+    line-height: 0.9;
+}
+
+.tagline {
+    max-width: 600px;
+    margin: 30px 0 0;
+    font-size: 1.4rem;
+}
+
+/* Main content */
+
+main {
+    padding: 0 8% 100px;
+}
+
+
+/* Weekend sections */
+
+.weekend-section {
+    margin-bottom: 80px;
+}
+
+.weekend-section > h2 {
+    margin: 0 0 24px;
+    font-size: 2rem;
+}
+
+.weekend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.weekend-card {
+    min-height: 300px;
+    padding: 40px;
+
+    background-color: #111315;
+    color: #e5e7eb;
+    text-decoration: none;
+    border: 2px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.weekend-card h3 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+}
+
+.weekend-card p {
+    margin: 0;
+    max-width: 450px;
+}
+
+
+/* Field notes */
+
+.article-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.article-card {
+    min-height: 300px;
+    padding: 40px;
+
+    background-color: #111315;
+    color: #e5e7eb;
+    text-decoration: none;
+    border: 2px solid #e5e7eb;
+}
+
+.article-card h2 {
+    margin: 10px 0;
+}
+
+.card-label {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .weekend-grid,
+    .article-section {
+        grid-template-columns: 1fr;
+    }
+
+    .weekend-card,
+    .article-card {
+        min-height: 220px;
+        padding: 28px;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    body {
+        background-color: #f5f5f2;
+        color: #111315;
+    }
+
+    .navbar {
+        background-color: #f5f5f2;
+    }
+
+    .nav-logo,
+    .nav-links a {
+        color: #111315;
+    }
+
+    .weekend-card,
+    .article-card {
+        background-color: #f5f5f2;
+        color: #111315;
+        border-color: #111315;
+    }
+}
